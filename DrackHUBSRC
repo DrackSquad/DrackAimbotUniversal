@@ -1,13 +1,14 @@
 local DiscordLib =
     loadstring(game:HttpGet "https://pastebin.com/raw/pjQ6yNJK")()
 
-local win = DiscordLib:Window("DrackHUB")
+local win = DiscordLib:Window("DrackHUB version 1.4")
 
 local serv = win:Server("Main scripts", "")
 
+local unis = serv:Channel("Universal")
+
 local fun = serv:Channel("Fun scripts")
 
-local unis = serv:Channel("Universal")
 
 unis:Button(
     "Fly GUI",
@@ -51,6 +52,14 @@ unis:Button(
     end
 )
 
+fun:Button(
+    "FE Drift",
+    function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/mgb76Nhw'))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
 unis:Button(
     "Universal AIMBOT",
     function()
@@ -67,6 +76,14 @@ unis:Button(
     end
 )
 
+unis:Button(
+    "Korblox & Faces (client-sided)",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackerProLuaStuff/avatar-editor-thing/main/headless.lua"))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
 fun:Button(
     "Front/Back Flips",
     function()
@@ -77,11 +94,13 @@ fun:Button(
 
 local cb = win:Server("Games", "")
 
+local M2 = cb:Channel("Murder Mystery 2")
+
+local ikea = cb:Channel("3008")
+
 local NSA = cb:Channel("No Scope Arcade")
 
 local BP = cb:Channel("Breaking Point 2")
-
-local M2 = cb:Channel("Murder Mystery 2")
 
 local cb = cb:Channel("Counter blox")
 
@@ -103,13 +122,12 @@ cb:Button(
 )
 
 cb:Button(
-    "Night HUB",
+    "Storm OP",
     function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dark-Scripts/Arsenal-Scripts/main/idkV2'))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/ceg21Npd'))()
         DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
     end
 )
-
 
 
 M2:Button(
@@ -121,10 +139,10 @@ M2:Button(
 )
 
 M2:Button(
-    "Egg Farm Script",
+    "HawK HUB",
     function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/eggs/main/MM2"))()
-        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))() 
+        DiscordLib:Notification("Info", "Key Is - hacininsalgami", "Good!")
     end
 )
 
@@ -160,11 +178,20 @@ NSA:Button(
     end
 )
 
+ikea:Button(
+    "Zeerox HUB",
+    function()
+    loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
 local inf = win:Server("Info", "")
 
 local info = inf:Channel("Information")
 
 info:Label("Drack Squad Scripts HUB")
+info:Label("Version: V1.4")
 info:Label("Join Our Discord - https://discord.gg/nPEjUH6rn3")
 info:Label("Made by - @ewinnery")
 info:Label("Discord Lib Used")
