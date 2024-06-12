@@ -1,6 +1,20 @@
 local DiscordLib =
     loadstring(game:HttpGet "https://pastebin.com/raw/pjQ6yNJK")()
 
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+loadstring(game:HttpGet "https://pastebin.com/raw/6wdkRNgP")()
+
+Notification:Notify(
+    {Title = "Drack HUB LOADED", Description = "Join discord - https://discord.gg/nPEjUH6rn3"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+)
+
+wait(1)
+
+
 local win = DiscordLib:Window("DrackHUB version 1.4")
 
 local serv = win:Server("Main scripts", "")
@@ -8,6 +22,7 @@ local serv = win:Server("Main scripts", "")
 local unis = serv:Channel("Universal")
 
 local fun = serv:Channel("Fun scripts")
+
 
 
 unis:Button(
@@ -94,6 +109,16 @@ fun:Button(
 
 local cb = win:Server("Games", "")
 
+local blxof = cb:Channel("Blox Fruits")
+
+local dcw = cb:Channel("Decaying Winter")
+
+local tsb = cb:Channel("TSB")
+
+local bb = cb:Channel("Blade Ball")
+
+local GW = cb:Channel("Gods Will")
+
 local M2 = cb:Channel("Murder Mystery 2")
 
 local ikea = cb:Channel("3008")
@@ -146,6 +171,14 @@ M2:Button(
     end
 )
 
+GW:Button(
+    "Script V1.07",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/fxG4zktG", true))() 
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
 BP:Button(
     "Ski HUB",
     function()
@@ -182,6 +215,79 @@ ikea:Button(
     "Zeerox HUB",
     function()
     loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+bb:Button(
+    "Bedol V2",
+    function()
+    _G.UI_Size = 200 -- config ui size
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+bb:Button(
+    "Darkai HUB",
+    function()
+    loadstring(game:HttpGet("https://pastefy.app/scPne8wv/raw"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+tsb:Button(
+    "Cheate",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Hub/Load.lua", true))() 
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+tsb:Button(
+    "xtrey10x hub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/saitama"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+tsb:Button(
+    "HawK HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+        DiscordLib:Notification("Info", "Key is - hacininsalgami", "Good!")
+    end
+)
+
+dcw:Button(
+    "Main HUB",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MrWhite1110/Decaying-Winter-Op-Script-V2/main/Decaying%20Winter%20Op%20script'))()
+        DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
+    end
+)
+
+blxof:Button(
+    "Azure V3",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BasementHub/BH-Blox-fruit/main/W-Azure-V3"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+blxof:Button(
+    "Tbao HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubBloxFruit"))() 
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+blxof:Button(
+    "Blck HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
         DiscordLib:Notification("Info", "Script Injected", "Good!")
     end
 )
