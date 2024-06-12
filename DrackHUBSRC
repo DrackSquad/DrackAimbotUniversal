@@ -115,6 +115,8 @@ local dcw = cb:Channel("Decaying Winter")
 
 local tsb = cb:Channel("TSB")
 
+local dhd = cb:Channel ("Da Hood")
+
 local bb = cb:Channel("Blade Ball")
 
 local GW = cb:Channel("Gods Will")
@@ -288,6 +290,30 @@ blxof:Button(
     "Blck HUB",
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+dhd:Button(
+    "Zen Ware",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/infinitedude108/zen-ware/main/loader'))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+dhd:Button(
+    "Pluto",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Scrvpter/Pluto/Lua/Loader.Lua', true))(); 
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+dhd:Button(
+    "BeamedWare.CC",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RYZZCHIPSX/ryzzchips/main/beamed%20ware%20script"))();
         DiscordLib:Notification("Info", "Script Injected", "Good!")
     end
 )
