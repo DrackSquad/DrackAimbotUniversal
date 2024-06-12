@@ -660,7 +660,7 @@ function DiscordLib:Window(text)
 	ChangeAvatarText.BackgroundTransparency = 1.000
 	ChangeAvatarText.Size = UDim2.new(0, 71, 0, 71)
 	ChangeAvatarText.Font = Enum.Font.GothamBold
-	ChangeAvatarText.Text = "CHAGNE    AVATAR"
+	ChangeAvatarText.Text = "EASTER    EGG"
 	ChangeAvatarText.TextColor3 = Color3.fromRGB(255, 255, 255)
 	ChangeAvatarText.TextSize = 11.000
 	ChangeAvatarText.TextWrapped = true
