@@ -1,5 +1,5 @@
 local DiscordLib =
-    loadstring(game:HttpGet "https://pastebin.com/raw/pjQ6yNJK")()
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/githublib")()
 
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
@@ -15,9 +15,9 @@ Notification:Notify(
 wait(1)
 
 
-local win = DiscordLib:Window("DrackHUB version 1.4")
+local win = DiscordLib:Window("DrackHUB version 1.5")
 
-local serv = win:Server("Main scripts", "")
+local serv = win:Server("Main scripts", "rbxassetid://4034483344")
 
 local unis = serv:Channel("Universal")
 
@@ -92,6 +92,14 @@ unis:Button(
 )
 
 unis:Button(
+    "Universal ESP & Chams",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/unvesp"))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+unis:Button(
     "Korblox & Faces (client-sided)",
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxHackerProLuaStuff/avatar-editor-thing/main/headless.lua"))()
@@ -107,11 +115,15 @@ fun:Button(
     end
 )
 
-local cb = win:Server("Games", "")
+local cb = win:Server("Games", "rbxassetid://12689980465")
 
 local blxof = cb:Channel("Blox Fruits")
 
+local ars = cb:Channel("Arsenal")
+
 local dcw = cb:Channel("Decaying Winter")
+
+local cry = cb:Channel("Criminality")
 
 local tsb = cb:Channel("TSB")
 
@@ -318,12 +330,54 @@ dhd:Button(
     end
 )
 
-local inf = win:Server("Info", "")
+cry:Button(
+    "MoonLight",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GlobeReverse/Moonlight/main/Main.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+cry:Button(
+    "Fondra (Only KRNL)",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/0Xxtfktr"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+ars:Button(
+    "Black Panther HUB",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Gnuz4brw", true))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+
+local inf = win:Server("Info", "rbxassetid://4871684504")
 
 local info = inf:Channel("Information")
 
+local chgs = inf:Channel("Change Log")
+
 info:Label("Drack Squad Scripts HUB")
-info:Label("Version: V1.4")
+info:Label("Version: V1.5")
 info:Label("Join Our Discord - https://discord.gg/nPEjUH6rn3")
 info:Label("Made by - @ewinnery")
 info:Label("Discord Lib Used")
+
+chgs:Label("1.1: Starting using Discord Lib")
+chgs:Label("1.1: added first games")
+chgs:Label("1.1: Fixed the bugs")
+chgs:Label("1.2: added 3 games + universal script")
+chgs:Label("1.2: Added Fun in Main")
+chgs:Label("1.2: Fixed the bugs")
+chgs:Label("1.3: Added the infos page")
+chgs:Label("1.3: added more games")
+chgs:Label("1.4: added some more games + fun scripts")
+chgs:Label("1.4: deleted the dead scripts")
+chgs:Label("1.5: Fixed the bugs with Ui")
+chgs:Label("1.5: added Icons to Pages")
+chgs:Label("1.5: Added More games")
+chgs:Label("1.5: Find the Easter egg")
