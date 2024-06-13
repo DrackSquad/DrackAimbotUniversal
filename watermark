@@ -35,17 +35,7 @@ local Library = {
     AccentColor = Color3.fromRGB(94, 186, 55);
     OutlineColor = Color3.fromRGB(50, 50, 50);
     RiskColor = Color3.fromRGB(255, 50, 50),
-    local AccentColor = Color3.fromRGB(94, 186, 55)
-
-    while true do
-        local newColor = Color3.new(math.random(), math.random(), math.random())
-    
-        local info = TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, true)
-        local tween = TweenService:Create(workspace, info, {BackgroundColor3 = newColor})
-    
-        tween:Play()
-        tween.Completed:Wait()
-    end
+    local AccentColor = Color3.fromRGB(94, 186, 55),
 
     Black = Color3.new(0, 0, 0);
     Font = Enum.Font.Code,
