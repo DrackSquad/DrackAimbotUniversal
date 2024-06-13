@@ -8,17 +8,6 @@ local TweenService = game:GetService('TweenService');
 local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
-local Tween = require(game.ReplicatedStorage.Tween)
-
-local AccentColor = Color3.fromRGB(94, 186, 55)
-
-while true do
-    local newColor = Color3.new(math.random(), math.random(), math.random())
-    
-    Tween(Color3.fromRGB( AccentColor.R*255, AccentColor.G*255, AccentColor.B*255), Color3.fromRGB(newColor.R*255, newColor.G*255, newColor.B*255), 1, function(value)
-        AccentColor = Color3.fromRGB(value[1], value[2], value[3])
-    end)
-end
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
@@ -46,6 +35,15 @@ local Library = {
     AccentColor = Color3.fromRGB(0, 85, 255);
     OutlineColor = Color3.fromRGB(50, 50, 50);
     RiskColor = Color3.fromRGB(255, 50, 50),
+    local AccentColor = Color3.fromRGB(94, 186, 55)
+
+    while true do
+        local newColor = Color3.new(math.random(), math.random(), math.random())
+    
+        Tween(Color3.fromRGB( AccentColor.R*255, AccentColor.G*255, AccentColor.B*255), Color3.fromRGB(newColor.R*255, newColor.G*255, newColor.B*255), 1, function(value)
+            AccentColor = Color3.fromRGB(value[1], value[2], value[3])
+        end)
+    end
 
     Black = Color3.new(0, 0, 0);
     Font = Enum.Font.Code,
