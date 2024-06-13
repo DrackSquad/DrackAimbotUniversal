@@ -4,7 +4,12 @@ local DiscordLib =
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
-loadstring(game:HttpGet "https://pastebin.com/raw/6wdkRNgP")()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/watermark"))()
+local player = game.Players.LocalPlayer
+local text = "Drack HUB | version 1.5 | "
+local textWithPlayer = text .. player.Name
+Library:SetWatermark(textWithPlayer, player)
+
 
 Notification:Notify(
     {Title = "Drack HUB LOADED", Description = "Join discord - https://discord.gg/nPEjUH6rn3"},
@@ -21,7 +26,10 @@ local serv = win:Server("Main scripts", "rbxassetid://4034483344")
 
 local unis = serv:Channel("Universal")
 
+local aim = serv:Channel("Aimbot & Esp")
+
 local fun = serv:Channel("Fun scripts")
+
 
 
 
@@ -30,6 +38,14 @@ unis:Button(
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
         DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+unis:Button(
+    "Fe anims (R6)",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wCU3q59D"))()
+        DiscordLib:Notification("Info", "Working only R6", "Good!")
     end
 )
 
@@ -75,7 +91,7 @@ fun:Button(
     end
 )
 
-unis:Button(
+aim:Button(
     "Universal AIMBOT",
     function()
     loadstring(game:HttpGet'https://pastebin.com/raw/SWR1fQAp')()
@@ -83,18 +99,34 @@ unis:Button(
     end
 )
 
-unis:Button(
-    "Universal ESP & AIMBOT",
+aim:Button(
+    "Universal Silent Aim",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua"))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+aim:Button(
+    "DeleteMob ESP & Aimbot",
     function()
     loadstring(game:HttpGet'https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/UniversalAimbot')()
         DiscordLib:Notification("Info", "Scripts Injected", "Good!")
     end
 )
 
-unis:Button(
-    "Universal ESP & Chams",
+aim:Button(
+    "DrackHUB Esp & Aimbot",
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/unvesp"))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+aim:Button(
+    "LightUx ESP",
+    function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/cool83birdcarfly02six/UNIVERSALESPLTX/main/README.md'),true))()
         DiscordLib:Notification("Info", "Scripts Injected", "Good!")
     end
 )
@@ -116,6 +148,8 @@ fun:Button(
 )
 
 local cb = win:Server("Games", "rbxassetid://12689980465")
+
+local helm = cb:Channel("Hellmet")
 
 local blxof = cb:Channel("Blox Fruits")
 
@@ -354,6 +388,15 @@ ars:Button(
     end
 )
 
+helm:Button(
+    "Enemy ESP",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/hellmetEnemiesEsp", true))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+
 
 local inf = win:Server("Info", "rbxassetid://4871684504")
 
@@ -381,3 +424,5 @@ chgs:Label("1.5: Fixed the bugs with Ui")
 chgs:Label("1.5: added Icons to Pages")
 chgs:Label("1.5: Added More games")
 chgs:Label("1.5: Find the Easter egg")
+chgs:Label("1.5: Change the watermark")
+chgs:Label("1.5: Added Aimbot & Esp channel for aimbot scripts")
