@@ -57,6 +57,15 @@ unis:Button(
     end
 )
 
+unis:Button(
+    "Chat Bypass FE",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrSuno/Filtering-Disabled/main/main.lua"))()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+
 fun:Button(
     "F#ck GUI",
     function()
@@ -149,6 +158,12 @@ fun:Button(
 
 local cb = win:Server("Games", "rbxassetid://12689980465")
 
+local dg = cb:Channel("Dingus")
+
+local ept = cb:Channel("Entry Point")
+
+local isle = cb:Channel("Isle")
+
 local helm = cb:Channel("Hellmet")
 
 local blxof = cb:Channel("Blox Fruits")
@@ -201,6 +216,15 @@ cb:Button(
         DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
     end
 )
+
+cb:Button(
+    "Dead Ware",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/cbremas", true))()
+        DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
+    end
+)
+
 
 
 M2:Button(
@@ -388,10 +412,58 @@ ars:Button(
     end
 )
 
+ars:Button(
+    "Thunder Client",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/antipipka/roblox/main/Arsenal.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+dg:Button(
+    "Drack HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/dgscript"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+dg:Button(
+    "Dev HUB",
+    function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Alech01/Push-Simulator-By-SOuly/main/Push%20Simulator%20By%20Souly')))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
 helm:Button(
     "Enemy ESP",
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/hellmetEnemiesEsp", true))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+isle:Button(
+    "Krypto",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/leanclean/isle-/main/Secured%20isle.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+isle:Button(
+    "Main script",
+    function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/w-a-e/cf38dd10d3ab3b5171f37841b380466a/raw/3c38a06dfc28e8537d309476037660537378dfbe/gistfile1.txt"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+ept:Button(
+    "Enemy & Camera ESP",
+    function()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
         DiscordLib:Notification("Info", "Script Injected", "Good!")
     end
 )
@@ -426,3 +498,4 @@ chgs:Label("1.5: Added More games")
 chgs:Label("1.5: Find the Easter egg")
 chgs:Label("1.5: Change the watermark")
 chgs:Label("1.5: Added Aimbot & Esp channel for aimbot scripts")
+chgs:Label("1.5: Added 3 games")
