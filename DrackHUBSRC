@@ -10,17 +10,23 @@ local text = "Drack HUB | version 1.5 | "
 local textWithPlayer = text .. player.Name
 Library:SetWatermark(textWithPlayer, player)
 
+Notification:Notify(
+    {Title = "Drack HUB Loaded", Description = "Join discord - https://discord.gg/nPEjUH6rn3         Please join us"},
+    {OutlineColor = Color3.fromRGB(50, 99, 50),Time = 6, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=11401835376", ImageColor = Color3.fromRGB(255, 90, 84)}
+)
 
 Notification:Notify(
-    {Title = "Drack HUB LOADED", Description = "Join discord - https://discord.gg/nPEjUH6rn3"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+    {Title = "Spectate the Author", Description = "Made by @ewinnery                                  The HUB Creator"},
+    {OutlineColor = Color3.fromRGB(0, 99, 99),Time = 6, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=12120704330", ImageColor = Color3.fromRGB(255, 90, 84)}
 )
+
 
 wait(1)
 
 
-local win = DiscordLib:Window("DrackHUB version 1.5")
+local win = DiscordLib:Window("DrackHUB version 1.5 | by @ewinnery")
 
 local serv = win:Server("Main scripts", "rbxassetid://4034483344")
 
@@ -30,7 +36,10 @@ local aim = serv:Channel("Aimbot & Esp")
 
 local fun = serv:Channel("Fun scripts")
 
+local test = serv:Channel("Soon...")
 
+test:Label("Making something soon...")
+test:Label("Sub to Our discord - https://discord.gg/nPEjUH6rn3")
 
 
 unis:Button(
@@ -70,6 +79,14 @@ fun:Button(
     "F#ck GUI",
     function()
     loadstring(game:HttpGet'https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/fckgui')()
+        DiscordLib:Notification("Info", "Scripts Injected", "Good!")
+    end
+)
+
+fun:Button(
+    "FE HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
         DiscordLib:Notification("Info", "Scripts Injected", "Good!")
     end
 )
@@ -158,6 +175,8 @@ fun:Button(
 
 local cb = win:Server("Games", "rbxassetid://12689980465")
 
+local yba = cb:Channel("YBA") 
+
 local dg = cb:Channel("Dingus")
 
 local ept = cb:Channel("Entry Point")
@@ -242,6 +261,24 @@ M2:Button(
         DiscordLib:Notification("Info", "Key Is - hacininsalgami", "Good!")
     end
 )
+
+M2:Button(
+    "Dark Cheat Client",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/loader.lua", true))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+M2:Button(
+    "Astralic",
+    function()
+    loadstring(game:HttpGet("https://ahsrua.com"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+M2:Label("HawK HUB: Key Is - hacininsalgami")
+
 
 GW:Button(
     "Script V1.07",
@@ -468,6 +505,15 @@ ept:Button(
     end
 )
 
+yba:Button(
+    "YBA Script",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+
 
 
 local inf = win:Server("Info", "rbxassetid://4871684504")
@@ -482,6 +528,9 @@ info:Label("Join Our Discord - https://discord.gg/nPEjUH6rn3")
 info:Label("Made by - @ewinnery")
 info:Label("Discord Lib Used")
 
+chgs:Label("1.0: Starting using Orion lib")
+chgs:Label("1.0: Making the small updates")
+chgs:Label("1.0: Founded a Discord Lib")
 chgs:Label("1.1: Starting using Discord Lib")
 chgs:Label("1.1: added first games")
 chgs:Label("1.1: Fixed the bugs")
