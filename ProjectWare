@@ -1,0 +1,1311 @@
+-- not mine!
+local Decimals = 4
+local Clock = os.clock()
+local ValueText = "Projectware.exe starting:"
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/1%20Tokyo%20Lib%20(FIXED)/Tokyo%20Lib%20Source.lua"))({
+    cheatname = "Projectware.exe",
+    gamename = "Project delta",
+})
+
+library:init()
+
+local Window1  = library.NewWindow({
+    title = "ProjectWare.exe | Projectware", -- Mainwindow Text
+    size = UDim2.new(0, 510, 0.6, 6
+)})
+
+local Tab1 = Window1:AddTab("  Combat  ")
+local Tab2 = Window1:AddTab("  Visual  ")
+local Tab3 = Window1:AddTab("  Misc  ")
+local SettingsTab = library:CreateSettingsTab(Window1)
+
+--Tab1:SetText("Text")
+local Section1 = Tab1:AddSection("Legit", 1)
+local Section2 = Tab1:AddSection("Rage", 2)
+local Section3 = Tab1:AddSection("Manipulation", 3)
+local Section4 = Tab1:AddSection("Triggerbot", 4)
+local Section1A = Tab2:AddSection("Visuals", 1)
+local Section2A = Tab2:AddSection("Self Visuals", 2)
+local Section3A = Tab2:AddSection("Remote Spectates", 2)
+local Section4A = Tab2:AddSection("World Visuals", 4)
+--Section1:SetText("Text")
+
+function destroy()
+    object:SetVisible(false)
+end
+
+Section1:AddToggle({
+    text = "Aimlock",
+    state = false,
+    risky = false,
+    tooltip = "Z Teamcheck C Esp U Auto Prediction",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/Aimlock"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddToggle({
+    text = "Target Bots",
+    state = false,
+    risky = false,
+    tooltip = "Bots GET TARGETED!!!",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddToggle({
+    text = "WallCheck",
+    state = false,
+    risky = false,
+    tooltip = "Checks if theres wall",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/WallCheck"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddToggle({
+    text = "AutoShoot",
+    state = false,
+    risky = true,
+    tooltip = "Automatically Shoots",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddSlider({
+    enabled = true,
+    text = "Auto Delay",
+    tooltip = "Customize your delay however how much you want it",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 500,
+    increment = 0.1,
+    risky = false,
+    callback = function(value)
+        print("Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section1:AddSlider({
+    enabled = true,
+    text = "Automatic Distance",
+    tooltip = "Distance do:3",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 30,
+    increment = 0.1,
+    risky = false,
+    callback = function(value)
+        print("Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section1:AddToggle({
+    text = "Crosshair Fix",
+    state = false,
+    risky = true,
+    tooltip = "Crosshair?",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = ""
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddToggle({
+    text = "Fov",
+    state = false,
+    risky = true,
+    tooltip = "Circle on middle",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/No%20Recoil"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddToggle({
+    text = "Fov Dynamics",
+    state = false,
+    risky = true,
+    tooltip = "Dynamics For the Fov",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/No%20Recoil"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section1:AddSlider({
+    enabled = true,
+    text = "Fov",
+    tooltip = "Customize your damage however how much you want it",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 360,
+    increment = 0.1,
+    risky = true,
+    callback = function(value)
+        print("Damage Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section1:AddSlider({
+    enabled = true,
+    text = "Sides Curve",
+    tooltip = "Customize your damage however how much you want it",
+    flag = "Curves the sides If set 0 its like square",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 500,
+    increment = 0.1,
+    risky = true,
+    callback = function(value)
+        print("Damage Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section1:AddToggle({
+    text = "SnapLines",
+    state = false,
+    risky = true,
+    tooltip = "Snaps Lines",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+Section2:AddToggle({
+    text = "Silent Aim",
+    state = false,
+    risky = true,
+    tooltip = "automatically hits on player",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script Here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddList({
+    enabled = true,
+    text = "SilentAimHitbox", 
+    tooltip = "tooltip1",
+    selected = "",
+    multi = false,
+    open = false,
+    max = 4,
+    values = {"Head", "UpperTorso", "Randomized"},
+    risky = true,
+    callback = function(v)
+        print(ValueText, v)
+    end
+})Section2:AddSlider({
+    enabled = true,
+    text = "Hit Chances",
+    tooltip = "Silent aim chances of hitting",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 100,
+    increment = 1,
+    risky = true,
+    callback = function(value)
+        print("Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section2:AddToggle({
+    text = "ClientBringer",
+    state = false,
+    risky = false,
+    tooltip = "Brings Player X to bring",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/ClientBring"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddToggle({
+    text = "ClientBringer AI",
+    state = false,
+    risky = false,
+    tooltip = "Brings Player B to bring",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/ClientBring"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddToggle({
+    text = "Hit Tracers",
+    state = false,
+    risky = false,
+    tooltip = "Shows a line when hitting someone",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddSlider({
+    enabled = true,
+    text = "Hit Tracer Life",
+    tooltip = "Customize how long it is going to be there",
+    flag = "Slider",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 100,
+    increment = 0.1,
+    risky = true,
+    callback = function(value)
+        print("Damage Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section2:AddToggle({
+    text = "Hitlogs",
+    state = false,
+    risky = false,
+    tooltip = "Logs the shot you hit",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddToggle({
+    text = "Anti Aim",
+    state = false,
+    risky = false,
+    tooltip = "Enable Anti Aim",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})Section2:AddSlider({
+    enabled = true,
+    text = "Angle",
+    tooltip = "-2 look down +2 look up",
+    flag = "Slider",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = -2,
+    max = 2,
+    increment = 0.1,
+    risky = true,
+    callback = function(value)
+        print("Damage Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})Section2:AddToggle({
+    text = "SpinBot",
+    state = false,
+    risky = false,
+    tooltip = "Enable SpinBot",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+local function ChangeFOV(value)
+    -- Your function to change the FOV goes here
+    print("FOV changed to", value)
+end
+
+Section2:AddBind({
+    enabled = true,
+    text = "ZoomBind",
+    tooltip = "Zoom to see further",
+    mode = "toggle",
+    bind = "None",
+    flag = "ToggleKey_1",
+    state = false,
+    nomouse = false,
+    risky = false,
+    noindicator = false,
+    callback = function(v)
+        varsglobal.visuals.FovZoom = v
+        if v then
+            workspace.CurrentCamera.FieldOfView = varsglobal.visuals.ZoomAmt
+        else
+            workspace.CurrentCamera.FieldOfView = varsglobal.visuals.OldFov
+        end
+    end
+})
+Section2:AddSlider({
+    enabled = true,
+    text = "FOV Slider",
+    tooltip = "Adjust FOV",
+    flag = "FOV_Slider",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 120,
+    increment = 1, 
+    risky = false,
+    callback = function(v)
+        varsglobal.visuals.FovAdd = v
+        if varsglobal.visuals.FovChanger then
+            workspace.CurrentCamera.FieldOfView = varsglobal.visuals.FovAdd
+        end
+    end
+})Section2:AddToggle({
+    text = "Mine Bitcoin",
+    state = false,
+    risky = false,
+    tooltip = "Mines bitcoins",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Script executed!")
+        else
+            print("script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+Section3:AddToggle({
+    text = "Enable",
+    state = false,
+    risky = false,
+    tooltip = "",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = ""
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+Section3:AddToggle({
+    text = "No Recoil",
+    state = false,
+    risky = false,
+    tooltip = "Deletes Recoil",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/No%20Recoil"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Recoil script executed!")
+        else
+            print("Recoil script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "No Spread",
+    state = false,
+    risky = false,
+    tooltip = "Spread no bullet",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/No%20spread"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "Burst Shot",
+    state = false,
+    risky = true,
+    tooltip = "Bursts Tons of bullet in 1 click",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "No Tracer Bullets",
+    state = false,
+    risky = false,
+    tooltip = "Makes no tracers when shooting tracers",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "Instant Hits",
+    state = false,
+    risky = false,
+    tooltip = "Hits the target instantly",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/No%20bullet%20drop"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "Bullet TP",
+    state = false,
+    risky = true,
+    tooltip = "Bullet teleports to the target",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "Force Semi BoltGuns",
+    state = false,
+    risky = true,
+    tooltip = "You already know",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/No%20Recoil"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddToggle({
+    text = "Rapid Fire",
+    state = false,
+    risky = false,
+    tooltip = "Rapid Fire makes the gun fire fast",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/RapidFire"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section3:AddSeparator({
+    enabled = true,
+    text = "Sliders"
+})Section3:AddSlider({
+    enabled = true,
+    text = "Damage",
+    tooltip = "Customize your damage however how much you want it",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 500,
+    increment = 0.1,
+    risky = false,
+    callback = function(value)
+        print("Damage Slider Value:", value)
+        local ammoTypes = game.ReplicatedStorage.AmmoTypes:GetChildren()
+        for _, ammoType in ipairs(ammoTypes) do
+            if ammoType:IsA("ObjectValue") then
+                local ammoObject = ammoType.Value
+                if ammoObject then
+                    ammoObject:SetAttribute("Damage", value)
+                end
+            end
+        end
+    end
+})
+
+Section4:AddToggle({
+    text = "TriggerBot",
+    state = false,
+    risky = true,
+    tooltip = "Triggers when aiming at player",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section4:AddToggle({
+    text = "NPC TriggerBot",
+    state = false,
+    risky = true,
+    tooltip = "Triggers On Bots",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "Script here"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+Section1A:AddToggle({
+    text = "Box",
+    state = false,
+    risky = false,
+    tooltip = "See Players Boxes",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/Box"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "HealthText",
+    state = false,
+    risky = false,
+    tooltip = "See Players HealthBar but texted",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Remote Control Player Fov",
+    state = false,
+    risky = false,
+    tooltip = "See what they do G To activate",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/RemoteControl"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Chams",
+    state = false,
+    risky = false,
+    tooltip = "See Players Whole Body",
+    flag = "Toggle_1",
+    callback = function(enabled)
+        print("Chams enabled:", enabled)
+        if enabled then
+            local FillColor = Color3.fromRGB(175, 25, 255)
+            local DepthMode = "AlwaysOnTop"
+            local FillTransparency = 0.5
+            local OutlineColor = Color3.fromRGB(255, 255, 255)
+            local OutlineTransparency = 0
+
+            local CoreGui = game:GetService("CoreGui")
+            local Players = game:GetService("Players")
+            local lp = Players.LocalPlayer
+            local connections = {}
+
+            local Storage = Instance.new("Folder")
+            Storage.Parent = CoreGui
+            Storage.Name = "Highlight_Storage"
+
+            local function Highlight(plr)
+                local Highlight = Instance.new("Highlight")
+                Highlight.Name = plr.Name
+                Highlight.FillColor = FillColor
+                Highlight.DepthMode = DepthMode
+                Highlight.FillTransparency = FillTransparency
+                Highlight.OutlineColor = OutlineColor
+                Highlight.OutlineTransparency = 0
+                Highlight.Parent = Storage
+
+                local plrchar = plr.Character
+                if plrchar then
+                    Highlight.Adornee = plrchar
+                end
+
+                connections[plr] = plr.CharacterAdded:Connect(function(char)
+                    Highlight.Adornee = char
+                end)
+            end
+
+            Players.PlayerAdded:Connect(Highlight)
+            for _, v in ipairs(Players:GetPlayers()) do
+                Highlight(v)
+            end
+
+            Players.PlayerRemoving:Connect(function(plr)
+                local plrname = plr.Name
+                local highlight = Storage:FindFirstChild(plrname)
+                if highlight then
+                    highlight:Destroy()
+                end
+                if connections[plr] then
+                    connections[plr]:Disconnect()
+                end
+            end)
+        else
+            local Storage = game:GetService("CoreGui"):FindFirstChild("Highlight_Storage")
+            if Storage then
+                Storage:Destroy()
+            end
+        end
+    end
+})Section1A:AddColor({
+    text = "Chams Color",
+    color = FillColor,
+    flag = "Chams_Color",
+    callback = function(color)
+        FillColor = color
+        for _, highlight in ipairs(Storage:GetChildren()) do
+            highlight.FillColor = FillColor
+        end
+    end
+})Section1A:AddToggle({
+    text = "Distance",
+    state = false,
+    risky = false,
+    tooltip = "See Players Distance",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "View Angle",
+    state = false,
+    risky = false,
+    tooltip = "View angles",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Inventory Viewer",
+    state = false,
+    risky = false,
+    tooltip = "View Inventories",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/Inventory%20Viewer"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Skeleton",
+    state = false,
+    risky = false,
+    tooltip = "See Players Bones",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Tracer",
+    state = false,
+    risky = false,
+    tooltip = "See a line pointing to players",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddSeparator({
+    enabled = true,
+    text = "Separator"
+})Section1A:AddToggle({
+    text = "Enable",
+    state = false,
+    risky = false,
+    tooltip = "Enable This for features to work",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Corpse",
+    state = false,
+    risky = false,
+    tooltip = "This sees dead bodies",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "Corpse Distance",
+    state = false,
+    risky = false,
+    tooltip = "To see Corpse distances",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section1A:AddToggle({
+    text = "AI ESP",
+    state = false,
+    risky = false,
+    tooltip = "See AI's",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/AI%20ESP"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+
+
+
+
+
+Section1A:AddToggle({
+    text = "Extract",
+    state = false,
+    risky = false,
+    tooltip = "Extractions ESP",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "script"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section4A:AddToggle({
+    text = "GameTime",
+    state = false,
+    risky = true,
+    tooltip = "Loops Day",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/LoopDay"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section4A:AddToggle({
+    text = "No Fog",
+    state = false,
+    risky = false,
+    tooltip = "Deletes Fog",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/Aimlock/main/No%20fog"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})Section4A:AddToggle({
+    text = "No Trees",
+    state = false,
+    risky = false,
+    tooltip = "Deletes Trees",
+    flag = "Toggle_1",
+    callback = function(v)
+        print("Value:", v)
+        if v then
+                
+            local scriptURL = "https://raw.githubusercontent.com/Whisperware/LibraryF/main/No%20trees"
+            local scriptContent = game:HttpGet(scriptURL)
+            loadstring(scriptContent)() 
+            print("Fog script executed!")
+        else
+            print("Fog script turned off.")
+            destroy(v)
+        end
+    end
+})
+
+--[[Section3:AddBox({
+    enabled = true,
+    name = "Projectware",
+    flag = "TextBox_1",
+    input = "Box :3",
+    focused = false,
+    risky = false,
+    callback = function(v)
+        print(ValueText, v)
+    end
+})]]--[[Section3:AddBind({
+    enabled = true,
+    text = "Keybind1",
+    tooltip = "tooltip1",
+    mode = "toggle",
+    bind = "None",
+    flag = "ToggleKey_1",
+    state = false,
+    nomouse = false,
+    risky = false,
+    noindicator = false,
+    callback = function(v)
+        print(ValueText, v)
+    end,
+    keycallback = function(v)
+        print(ValueText, v)
+    end
+})]]
+
+
+--[[Section1:AddColor({
+    text = "Color1",
+    color = Color3.fromRGB(255, 255, 255),
+    flag = "Color_1",
+    callback = function(v)
+        print(ValueText, v)
+    end
+})]]
+
+--[[Section4:AddButton({
+    enabled = true,
+    text = "ButtonReal",
+    tooltip = "tooltip1",
+    confirm = true,
+    risky = false,
+    callback = function()
+        print("Pressed!")
+    end
+})]]
+
+--[[Section4:AddSlider({
+    enabled = true,
+    text = "Slider1",
+    tooltip = "tooltip1",
+    flag = "Slider_1",
+    suffix = "",
+    dragging = true,
+    focused = false,
+    min = 0,
+    max = 100,
+    increment = 0.1,
+    risky = false,
+    callback = function(v)
+        print(ValueText, v)
+    end
+})]]
+
+--[[Section4:AddList({
+    enabled = true,
+    text = "Selection", 
+    tooltip = "tooltip1",
+    selected = "",
+    multi = false,
+    open = false,
+    max = 4,
+    values = {"1", "2", "3"},
+    risky = false,
+    callback = function(v)
+        print(ValueText, v)
+    end
+})]]
+
+--[[Section4:AddColor({
+    enabled = true,
+    text = "Color1",
+    tooltip = "tooltip1",
+    color = Color3.fromRGB(255, 255, 255),
+    flag = "Color_1",
+    trans = 0,
+    open = false,
+    risky = false,
+    callback = function(v)
+        print(ValueText, v)
+    end
+})]]
+
+local Time = (string.format("%."..tostring(Decimals).."f", os.clock() - Clock))
+library:SendNotification(("Loaded In "..tostring(Time)), 6)
+
+--[[
+    --Window1:SetOpen(false)
+    makefolder("Projectware.exe")
+    library:SetTheme(Default)
+    library:GetConfig(Default)
+    library:LoadConfig(Default)
+    library:SaveConfig(Default)
