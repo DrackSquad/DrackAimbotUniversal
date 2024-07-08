@@ -1,15 +1,25 @@
 local DiscordLib =
-    loadstring(game:HttpGet "https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/githublib")()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/githublib"))()
 
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/watermark"))()
-local player = game.Players.LocalPlayer
-local text = "Drack HUB | version 1.5 | "
+local player = game.Players.LocalPlayer   
+local text = "Drack HUB | "
 local textWithPlayer = text .. player.Name
-Library:SetWatermark(textWithPlayer, player)
 
+local frameRate = 0
+local updateTime = 0.5 -- Интервал обновления в секундах
+local lastUpdateTime = 0
+
+game:GetService("RunService").Heartbeat:Connect(function(dt)
+    if os.clock() - lastUpdateTime >= updateTime then
+        frameRate = math.ceil(1 / dt)
+        Library:SetWatermark(textWithPlayer .. " | FPS: " .. frameRate, player)
+        lastUpdateTime = os.clock()
+    end
+end)
 Notification:Notify(
     {Title = "Drack HUB Loaded", Description = "Join discord - https://discord.gg/nPEjUH6rn3         Please join us"},
     {OutlineColor = Color3.fromRGB(50, 99, 50),Time = 6, Type = "image"},
@@ -26,7 +36,7 @@ Notification:Notify(
 wait(1)
 
 
-local win = DiscordLib:Window("DrackHUB version 1.5 | by @ewinnery")
+local win = DiscordLib:Window("DrackHUB version 1.5.1 | by @ewinnery")
 
 local serv = win:Server("Main scripts", "rbxassetid://4034483344")
 
@@ -94,7 +104,7 @@ fun:Button(
 fun:Button(
     "Anonymous effect",
     function()
-    local pe = Instance.new("ParticleEmitter",game.Players.LocalPlayer.Character.Torso)
+    local pe = Instance.new("ParticleEmitter",game.Players.  Character.Torso)
 pe.Texture = "http://roblox.com/asset/?id=127476787"
 pe.VelocitySpread = 50
         DiscordLib:Notification("Info", "Scripts Injected", "Good!")
@@ -173,7 +183,30 @@ fun:Button(
     end
 )
 
+fun:Button(
+    "Swastika Build",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/cRRkEykK"))()
+        DiscordLib:Notification("Info", "Client Sided (VISUAL)", "Good!")
+    end
+)
+
+fun:Button(
+    "nothing",
+    function()
+        DiscordLib:Notification("Info", "Making something soon", "Good!")
+    end
+)
+
 local cb = win:Server("Games", "rbxassetid://12689980465")
+
+local aft = cb:Channel("Aftermath")
+
+local bh = cb:Channel("BrookHeaven")
+
+local pd = cb:Channel("Project Delta")
+
+local cod = cb:Channel("Color Or Die")
 
 local yba = cb:Channel("YBA") 
 
@@ -211,6 +244,13 @@ local BP = cb:Channel("Breaking Point 2")
 
 local cb = cb:Channel("Counter blox")
 
+aft:Button(
+    "Ewinnery HUB",
+    function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/UwBYVFya"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
 
 cb:Button(
     "JARAN FREE",
@@ -224,6 +264,14 @@ cb:Button(
     "Supermacy",
     function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/CBRO", true))()
+        DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
+    end
+)
+
+cb:Button(
+    "TEST",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/uedan228/FREE-Counter-Blox-script/main/V1.1"))()
         DiscordLib:Notification("Info", "Hide menu on INS", "Good!")
     end
 )
@@ -244,13 +292,27 @@ cb:Button(
     end
 )
 
-
+M2:Button(
+    "R3TH PRIV",
+    function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
 
 M2:Button(
-    "SnapSnix HUB",
+    "SnapSnix HUB (Updated)",
     function()
-    loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()
         DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
+M2:Button(
+    "myulee HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Itzmyulee/ScriptMm2/main/Script"))() 
+        DiscordLib:Notification("Info", "May in testing", "Good!")
     end
 )
 
@@ -457,6 +519,15 @@ ars:Button(
     end
 )
 
+ars:Button(
+    "midnight free",
+    function()
+        game:HttpGet("https://getexploits.com/cexecution/730857759301718016")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/laeraz/midnightcc/main/public.lua"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+
 dg:Button(
     "Drack HUB",
     function()
@@ -513,7 +584,60 @@ yba:Button(
     end
 )
 
+cod:Button(
+    "Farm WIN",
+    function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/R8QMbhzv"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+cod:Button(
+    "Tora HUB",
+    function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/RSOscrip/Color-or-Die/main/RSO_script"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
 
+pd:Button(
+    "Project Ware",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DrackSquad/DrackAimbotUniversal/main/ProjectWare"))()
+        DiscordLib:Notification("Info", "Hide menu on END", "Good!")
+    end
+)
+pd:Label("May isnt working")
+
+bh:Button(
+    "Moon UI",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+bh:Button(
+    "JulHub",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/Brookhaven"))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+bh:Button(
+    "rblxhub",
+    function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+        DiscordLib:Notification("Info", "Script Injected", "Good!")
+    end
+)
+bh:Label("rblxhub may kill roblox")
+pd:Button(
+    "BBC HUB",
+    function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gmofi/BBC/main/source.lua"))()
+        DiscordLib:Notification("Info", "Do you like black cocks", "Good!")
+    end
+)
+pd:Label("May cant start in hub")
 
 
 local inf = win:Server("Info", "rbxassetid://4871684504")
@@ -523,11 +647,14 @@ local info = inf:Channel("Information")
 local chgs = inf:Channel("Change Log")
 
 info:Label("Drack Squad Scripts HUB")
-info:Label("Version: V1.5")
+info:Label("Version: V1.5.1")
 info:Label("Join Our Discord - https://discord.gg/nPEjUH6rn3")
 info:Label("Made by - @ewinnery")
 info:Label("Discord Lib Used")
 
+chgs:Label("1.0: Used a Oreo hub src for testing")
+chgs:Label("1.0: Maked a test script hub for friends")
+chgs:Label("1.0: Finded Orion Lib")
 chgs:Label("1.0: Starting using Orion lib")
 chgs:Label("1.0: Making the small updates")
 chgs:Label("1.0: Founded a Discord Lib")
@@ -548,3 +675,4 @@ chgs:Label("1.5: Find the Easter egg")
 chgs:Label("1.5: Change the watermark")
 chgs:Label("1.5: Added Aimbot & Esp channel for aimbot scripts")
 chgs:Label("1.5: Added 3 games")
+chgs:Label("1.5.1: Added Games + Fixes")
