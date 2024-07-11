@@ -1,0 +1,17 @@
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+  
+local folder = game.Workspace:FindFirstChild("ItemDrops")
+if folder then
+    for _, object in ipairs(folder:GetChildren()) do
+        if object:IsA("Model") then
+            local highlight = Instance.new("Highlight")
+            highlight.Parent = object
+        end
+    end
+end
+  Notification:Notify(
+    {Title = "Hihglite", Description = "Started Item ESP"},
+    {OutlineColor = Color3.fromRGB(50, 99, 50),Time = 3, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=11401835376", ImageColor = Color3.fromRGB(255, 55, 84)}
+)
